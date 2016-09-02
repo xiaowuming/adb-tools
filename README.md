@@ -7,25 +7,25 @@
 
 ### Sample code
 
-    ```js
+```js
 
-    var adb = require('adb-tools');
-    adb({
-        cmd: ['devices']
-    },function(result){
-        // code
-    });
-    ````
-    
-    ```js
+var adb = require('adb-tools');
+adb({
+    cmd: ['devices']
+},function(result){
+    // code
+});
+````
 
-    var adb = require('adb-tools');
-    adb({
-        deviceID: 'abc',
-        cmd: ['shell', ' cat', '/etc/hosts']
-    },function(result){
-        // code
-    });
-    ````
+```js
+
+var adb = require('adb-tools');
+adb({
+    deviceID: 'abc',
+    cmd: ['shell', ' cat', '/etc/hosts']
+},function(result){
+    // code
+});
+````
 
 

@@ -1,5 +1,5 @@
 {
-  "name": "adb",
+  "name": "adb-tools ",
   "version": "0.1.0",
   "description": "adb tools",
   "main": "index.js",

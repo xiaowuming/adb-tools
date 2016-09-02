@@ -4,13 +4,13 @@
 - Containing binary ADB file
 
 ### Install
-* ``npm install adb-tools -save``
+* ``npm install node-adb -save``
 
 ### Sample code
 
 ```js
 
-var adb = require('adb-tools');
+var adb = require('node-adb');
 adb({
     cmd: ['devices']
 },function(result){
@@ -20,7 +20,7 @@ adb({
 
 ```js
 
-var adb = require('adb-tools');
+var adb = require('node-adb');
 adb({
     deviceID: 'abc',
     cmd: ['shell', ' cat', '/etc/hosts']

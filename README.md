@@ -7,9 +7,8 @@
 
 ### Sample code
 
-``js
+```js
 
 var adb = require('adb-tools');
 
-
-``
+````

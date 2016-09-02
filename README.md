@@ -1,6 +1,7 @@
 # adb tools
 - Support windows, MAC, Linux (Ubuntu) system.
 - Easy to use.
+- Containing binary ADB file
 
 ### Install
 * ``npm install adb-tools -save``

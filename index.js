@@ -1,4 +1,4 @@
-module.exports = function (deviceID, options, next) {
+module.exports = function (options, next) {
     var exec = require('child_process').spawn;
 
     var adbPath = '';
@@ -14,11 +14,17 @@ module.exports = function (deviceID, options, next) {
             break;
     }
 
-    var a = require('path').join(__dirname, adbPath),
-        cmd = ['-s', deviceID];
+    var a = require('path').join(__dirname, adbPath);
 
-    cmd = cmd.concat(options);
+    var cmd = [];
 
+    if (typeof options.deviceID === 'string') {
+        cmd.push('-s');
+        cmd.push(options.deviceID);
+    }
+    if (typeof options.cmd === 'object') {
+        cmd = cmd.concat(options.cmd);
+    }
 
     var ls = exec(a, cmd);
     var useNext = false;
@@ -34,10 +40,12 @@ module.exports = function (deviceID, options, next) {
     });
 
     ls.on('exit', function () {
-        if (useNext === false) {
-            setTimeout(function () {
-                next();
-            }, 200);
+        if (typeof next === 'function') {
+            if (useNext === false) {
+                setTimeout(function () {
+                    next();
+                }, 200);
+            }
         }
     });
 

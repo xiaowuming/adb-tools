@@ -1,0 +1,24 @@
+{
+  "name": "adb",
+  "version": "0.1.0",
+  "description": "adb tools",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaowuming/adb-tools.git"
+  },
+  "keywords": [
+    "adb"
+  ],
+  "author": "xiaowuming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaowuming/adb-tools/issues"
+  },
+  "homepage": "https://github.com/xiaowuming/adb-tools#readme"
+}

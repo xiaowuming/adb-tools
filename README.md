@@ -2,6 +2,7 @@
 - Support windows, MAC, Linux (Ubuntu) system.
 - Easy to use.
 - Containing binary ADB file
+- NPM:<https://www.npmjs.com/package/node-adb>
 
 ### Install
 * ``npm install node-adb -save``

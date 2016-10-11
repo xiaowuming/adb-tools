@@ -1,7 +1,7 @@
 {
   "name": "node-adb ",
-  "version": "0.1.1",
-  "description": "adb tools",
+  "version": "0.1.2",
+  "description": "node-adb",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},

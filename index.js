@@ -9,8 +9,8 @@ module.exports = function (options, next) {
         cmd.push('-s');
         cmd.push(options.deviceID);
     }
-    if (typeof options.sh === 'object') {
-        cmd = cmd.concat(options.sh);
+    if (typeof options.shell === 'object') {
+        cmd = cmd.concat(options.shell);
     }
 
     var ls = exec(a, cmd);

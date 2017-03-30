@@ -1,20 +1,7 @@
 module.exports = function (options, next) {
     var exec = require('child_process').spawn;
 
-    var adbPath = '';
-    switch (require('os').type()) {
-        case 'Darwin':
-            adbPath = 'mac/adb';
-            break;
-        case 'Linux':
-            adbPath = 'linux/adb';
-            break;
-        default:
-            adbPath = 'win/adb.exe';
-            break;
-    }
-
-    var a = require('path').join(__dirname, adbPath);
+    var a = 'adb';
 
     var cmd = [];
 
@@ -29,7 +16,6 @@ module.exports = function (options, next) {
     var ls = exec(a, cmd);
     var useNext = false;
     ls.stdout.on('data', function (data) {
-        //console.log(data.toString());
         useNext = true;
         next && next(data.toString());
     });

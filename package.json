@@ -1,6 +1,6 @@
 {
   "name": "node-adb ",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "node-adb",
   "main": "index.js",
   "dependencies": {},
